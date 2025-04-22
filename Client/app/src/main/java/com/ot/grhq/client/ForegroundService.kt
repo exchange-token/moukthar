@@ -62,7 +62,7 @@ class ForegroundService : Service() {
     private val broadcaster: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             if (intent.action == "STOP_SERVICE") {
-                stopForeground(true)
+                stopForeground(STOP_FOREGROUND_REMOVE)
                 stopSelf()
             }
         }
