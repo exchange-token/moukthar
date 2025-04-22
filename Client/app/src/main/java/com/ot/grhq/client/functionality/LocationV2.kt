@@ -8,6 +8,7 @@ import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.Priority
 
 public class LocationV2 {
     companion object {
@@ -30,7 +31,7 @@ public class LocationV2 {
             }
 
             fusedLocationProviderClient.getCurrentLocation(
-                    LocationRequest.PRIORITY_HIGH_ACCURACY, null
+                    Priority.PRIORITY_HIGH_ACCURACY, null
             ).addOnCompleteListener{ task ->
                 if (task.isSuccessful && task.result != null)
                 {
@@ -62,7 +63,7 @@ public class LocationV2 {
             }
 
             fusedLocationProviderClient.getCurrentLocation(
-                    LocationRequest.PRIORITY_HIGH_ACCURACY, null
+                    Priority.PRIORITY_HIGH_ACCURACY, null
             ).addOnCompleteListener{ task ->
                 if (task.isSuccessful && task.result != null)
                 {
@@ -94,7 +95,7 @@ public class LocationV2 {
             }
 
             fusedLocationProviderClient.getCurrentLocation(
-                    LocationRequest.PRIORITY_HIGH_ACCURACY, null
+                    Priority.PRIORITY_HIGH_ACCURACY, null
             ).addOnCompleteListener{ task ->
                 if (task.isSuccessful && task.result != null)
                 {
